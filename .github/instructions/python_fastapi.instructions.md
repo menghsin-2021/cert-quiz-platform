@@ -1,7 +1,7 @@
-# Python Flask Development Guidelines
+# Python FastAPI Development Guidelines
 
 ## Introduction
-This document aims to provide development guidelines for Python Flask projects to ensure code quality, consistency, and facilitate team collaboration.
+This document aims to provide development guidelines for Python FastAPI projects to ensure code quality, consistency, and facilitate team collaboration.
 
 ## General Guidelines
 1. **Code Style**:
@@ -13,29 +13,35 @@ This document aims to provide development guidelines for Python Flask projects t
    - Write clear and concise comments to describe the logic of the code.
    - Provide docstrings for all functions and classes.
 4. **Dependency Management**:
-   - Use `requirements.txt` to manage dependencies.
+   - Use `pyproject.toml` with Poetry to manage dependencies.
    - Regularly update and check the versions of dependencies.
 
-## Flask Project Structure
+## FastAPI Project Structure
 1. **Recommended Directory Structure**:
    - Organize the project using the following structure:
      ```
      /project_root
      ├── app/
      │   ├── __init__.py
-     │   ├── routes.py
-     │   ├── models.py
-     │   ├── forms.py
-     │   └── templates/
-     │       └── ...
+     │   ├── main.py
+     │   ├── routers/
+     │   │   └── example_router.py
+     │   ├── models/
+     │   │   └── example_model.py
+     │   ├── schemas/
+     │   │   └── example_schema.py
+     │   ├── services/
+     │   │   └── example_service.py
+     │   └── utils/
+     │       └── example_util.py
      ├── tests/
      │   └── test_*.py
-     ├── requirements.txt
-     ├── config.py
-     └── run.py
+     ├── pyproject.toml
+     ├── .env
+     └── README.md
      ```
-2. **Blueprints**:
-   - Modularize functionalities by using Flask Blueprints to organize code.
+2. **Routers**:
+   - Use FastAPI's `APIRouter` to modularize routes and organize code.
 
 ## Testing
 1. **Testing Framework**:
@@ -48,7 +54,7 @@ This document aims to provide development guidelines for Python Flask projects t
 
 ## Security
 1. **Input Validation**:
-   - Validate all user inputs to prevent SQL injection and XSS attacks.
+   - Use Pydantic models to validate all user inputs.
 2. **Environment Variables**:
    - Store sensitive information (e.g., API keys, database passwords) in environment variables and manage them using a `.env` file.
 3. **HTTPS**:
@@ -56,7 +62,7 @@ This document aims to provide development guidelines for Python Flask projects t
 
 ## Deployment
 1. **Server**:
-   - Use Gunicorn or uWSGI as the WSGI server for production environments.
+   - Use Uvicorn as the ASGI server for production environments.
 2. **Containerization**:
    - Use Docker for containerized deployment.
 3. **CI/CD**:
@@ -66,20 +72,20 @@ This document aims to provide development guidelines for Python Flask projects t
 1. **Code Review**:
    - All pull requests must undergo code review before merging.
 2. **Documentation**:
-   - Ensure that code and API documentation are kept up-to-date.
+   - Use FastAPI's built-in OpenAPI documentation and ensure it is kept up-to-date.
 3. **Error Handling**:
    - Implement proper error handling mechanisms to provide meaningful error messages and avoid exposing sensitive information.
 4. **Logging**:
-   - Use a structured logging framework to capture and store logs for debugging and monitoring purposes.
+   - Use a structured logging framework like `loguru` to capture and store logs for debugging and monitoring purposes.
 5. **Configuration Management**:
-   - Use a centralized configuration file (e.g., `config.py`) to manage application settings.
+   - Use a centralized configuration file or environment variables to manage application settings.
 6. **Static Analysis**:
    - Use tools like `flake8` or `pylint` to perform static code analysis and ensure adherence to coding standards.
 
 ## Best Practices
 1. **Database Management**:
-   - Use an ORM like SQLAlchemy for database interactions.
-   - Follow database migration practices using tools like Flask-Migrate.
+   - Use an ORM like SQLAlchemy or Tortoise ORM for database interactions.
+   - Follow database migration practices using tools like Alembic.
 2. **Session Management**:
    - Use secure cookies and implement session expiration policies.
 3. **Performance Optimization**:

@@ -172,3 +172,41 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# FastAPI specific
+*.db
+*.sqlite3
+*.sqlite3-journal
+*.log
+*.pid
+*.pyc
+*.pyo
+*.pyd
+*.env
+instance/
+
+# React/TypeScript specific
+node_modules/
+build/
+dist/
+*.log
+*.cache/
+*.env
+*.env.local
+*.env.development
+*.env.test
+*.env.production
+*.eslintcache
+*.tsbuildinfo
+
+# IDE specific
+.idea/
+.vscode/
+
+# Testing
+coverage/
+*.lcov
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
