@@ -210,3 +210,7 @@ coverage/
 # Miscellaneous
 .DS_Store
 Thumbs.db
+
+# worklogs
+worklogs/
+worklogs/*.md
