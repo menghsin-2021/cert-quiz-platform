@@ -1,5 +1,5 @@
 # Setting Up a Python FastAPI Virtual Environment with Virtualenv and Poetry
-# Let's do this step by step.
+# Let's do it step by step. Directly execute the steps.
 
 ## Steps
 

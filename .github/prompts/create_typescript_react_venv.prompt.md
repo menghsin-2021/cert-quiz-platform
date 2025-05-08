@@ -1,5 +1,5 @@
 # Setting Up a TypeScript React Virtual Environment with npm and Create React App
-# Let's do this step by step.
+# Let's do it step by step. Directly execute the steps.
 
 ## Steps
 
