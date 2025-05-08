@@ -38,25 +38,13 @@ To disable Poetry from creating its own virtual environment, run:
 poetry config virtualenvs.create false
 ```
 
-### 6. Create a New Poetry Project
-Navigate to your project directory and run:
-```bash
-poetry new fastapi
-```
-- This command creates a new directory named `fastapi` with the basic structure of a Poetry project.
-
-Navigate into the `fastapi` directory:
-```bash
-cd fastapi
-```
-
-### 7. Install FastAPI and Other Dependencies
-Install the required dependencies for your FastAPI project:
+### 6. Install Dependencies
+Navigate to your project directory and install the required dependencies for your FastAPI project:
 ```bash
 poetry add fastapi uvicorn pytest
 ```
 
-### 8. Additional Configuration (Optional)
+### 7. Additional Configuration (Optional)
 - **Set Up Pre-commit Hooks**:
   Install `pre-commit` to ensure code quality:
   ```bash
@@ -78,14 +66,14 @@ poetry add fastapi uvicorn pytest
   poetry add python-dotenv
   ```
 
-### 9. Run the FastAPI Application
+### 8. Run the FastAPI Application
 Use `uvicorn` to run your FastAPI application:
 ```bash
-uvicorn main:app --reload
+uvicorn backend.src.fastapi:app --reload
 ```
-- Replace `main:app` with the actual module and application instance name in your project.
+- Replace `backend.src.fastapi:app` with the actual module and application instance name in your project if different.
 
-### 10. Testing
+### 9. Testing
 Run your tests using `pytest`:
 ```bash
 pytest
