@@ -42,12 +42,12 @@ cd backend
 ```
 
 ### 4. Install Dependencies
-根据使用者的 Python 版本，安裝相應的套件版本：
-- 如果使用 Python 3.8：
+According to the user's Python version, install the corresponding package versions:
+- If using Python 3.8:
   ```bash
   poetry add fastapi uvicorn@0.17.0 pytest python-dotenv@0.21.0 httpx
   ```
-- 如果使用 Python 3.9 或更高版本：
+- If using Python 3.9 or higher:
   ```bash
   poetry add fastapi uvicorn pytest python-dotenv httpx
   ```
@@ -72,21 +72,21 @@ source /Users/menghsin/Library/Caches/pypoetry/virtualenvs/backend-GwDCVs05-py3.
   pre-commit install
 
 - **Add Linting and Formatting Tools**:
-  Install `flake8`、`black` 和 `isort` 等工具以進行程式碼檢查和格式化：
+  Install tools like `flake8`, `black`, and `isort` for code linting and formatting:
   ```bash
-  # 如果使用 Python 3.8
+  # If using Python 3.8
   poetry add --dev flake8@5.0.4 black@22.3.0 isort@5.10.1
 
-  # 如果使用 Python 3.9 或更高版本
+  # If using Python 3.9 or higher
   poetry add --dev flake8 black isort
   ```
 
 - **Set Up Environment Variables**:
-  Create a `.env` file in your project directory to manage sensitive information：
+  Create a `.env` file in your project directory to manage sensitive information:
   ```bash
   touch .env
   ```
-  Add your environment variables to the `.env` file and use the `python-dotenv` library to load them：
+  Add your environment variables to the `.env` file and use the `python-dotenv` library to load them:
   ```bash
   poetry add python-dotenv@0.21.0
   ```
@@ -116,7 +116,7 @@ source /Users/menghsin/Library/Caches/pypoetry/virtualenvs/backend-GwDCVs05-py3.
         entry: flake8 .
         language: system
   ```
-  - This configuration will run `flake8`、`black` 和 `isort` 在每次提交前。
+  - This configuration will run `flake8`, `black`, and `isort` before every commit.
 
 - **Add Basic Settings for black and isort in pyproject.toml**:
   - Add the following content to the `pyproject.toml` file：
