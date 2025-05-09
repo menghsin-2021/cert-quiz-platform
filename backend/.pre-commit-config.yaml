@@ -1,0 +1,22 @@
+repos:
+- repo: local
+  hooks:
+    - id: isort
+      name: Sort imports
+      types: [python]
+      language: system
+      entry: isort
+    - id: black
+      name: Black
+      types: [python]
+      language: system
+      entry: black
+    - id: flake8
+      name: Flake8
+      types: [python]
+      language: system
+      exclude: "my-app"
+      entry: flake8
+      args:
+        - --exclude
+        - my-app
