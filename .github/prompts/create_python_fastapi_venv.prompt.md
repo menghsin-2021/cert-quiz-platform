@@ -1,8 +1,8 @@
-# Setting Up a Python FastAPI Virtual Environment with Poetry
-# Let's do it step by step. Directly execute the steps.
-# ask whether to proceed with the optional steps
-# This guide will help you set up a Python FastAPI virtual environment using `poetry` for dependency management.
-# The project structure will be as follows:
+## Setting Up a Python FastAPI Virtual Environment with Poetry
+### Let's do it step by step. Directly execute the steps.
+### ask whether to proceed with the optional steps
+### This guide will help you set up a Python FastAPI virtual environment using `poetry` for dependency management.
+### The project structure will be as follows:
 ```
 backend
 ├── poetry.lock
@@ -14,11 +14,11 @@ backend
     ├── __init__.py
     └── test_main.py
 ```
-# The `src` directory will contain your FastAPI application, and the `tests` directory will contain your test files.
-# The `poetry.lock` file will be generated automatically when you install dependencies using `poetry`.
-# The `pyproject.toml` file will contain the configuration for your project, including dependencies and settings for tools like `black`, `flake8`, and `isort`.
-# The `__init__.py` files are used to mark directories as Python packages.
-# The `main.py` file will contain your FastAPI application code, and the `test_main.py` file will contain your test cases.
+### The `src` directory will contain your FastAPI application, and the `tests` directory will contain your test files.
+### The `poetry.lock` file will be generated automatically when you install dependencies using `poetry`.
+### The `pyproject.toml` file will contain the configuration for your project, including dependencies and settings for tools like `black`, `flake8`, and `isort`.
+### The `__init__.py` files are used to mark directories as Python packages.
+### The `main.py` file will contain your FastAPI application code, and the `test_main.py` file will contain your test cases.
 
 ## Steps
 
